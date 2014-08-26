@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2>Watch Movie: {{ name }}<h2>
+    
+        <form action="{{ url_for('kill')}}">
+          <input type="submit" value="Stop Playing">
+        </form>
+
+
+      </div>
+{% endblock %}
+

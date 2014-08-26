@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    {% if names %}
+    <ul class="nav nav-pills">
+      <li class="active"><a href="#">Movies <span class="badge">{{i}}</span></a></li>
+     </ul>
+        {% for x in range(0,i) %}
+       
+              <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="{{ thumbnails[names[x]]}}"  width="40%" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading"> {{ names[x] }}<span class="text-muted"></span></h2>
+          <a href=" {{url_for('movie', movieid=names[x]|safe)}}"><button type="button" class="btn btn-lg btn-primary">Watch Movie</button></a>
+          <p class="lead"></p>
+        </div>
+            <ul class="nav nav-list">
+                      <li class="divider"></li>
+                      <ul>
+      </div>
+
+        {% endfor %}
+    {% endif %}
+     </div>
+{% endblock %}
+
