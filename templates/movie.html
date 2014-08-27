@@ -1,10 +1,104 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h2>Watch Movie: {{ name }}<h2>
+<script type=text/javascript>
+    $(function pause() {
+      $('a#pause').bind('click', function() {
+        $.getJSON('/_pause', {
+          state: $('#pausebtn').attr("value")
+        }, function(data) {
+          alert("data");
+        });
+        return false;
+      });
+    });
+  </script>
+
+  <script type=text/javascript>
+    $(function pChapter() {
+      $('a#pChapter').bind('click', function() {
+        $.getJSON('/_pChapter', {
+          state: $('#pausebtn').attr("value")
+        }, function(data) {
+          alert("data");
+        });
+        return false;
+      });
+    });
+  </script>
+
+  <script type=text/javascript>
+    $(function nChapter() {
+      $('a#nChapter').bind('click', function() {
+        $.getJSON('/_nChapter', {
+          state: $('#pausebtn').attr("value")
+        }, function(data) {
+          alert("data");
+        });
+        return false;
+      });
+    });
+  </script>
+
+   <script type=text/javascript>
+    $(function nLang() {
+      $('a#nLang').bind('click', function() {
+        $.getJSON('/_nLang', {
+          state: $('#pausebtn').attr("value")
+        }, function(data) {
+          alert("data");
+        });
+        return false;
+      });
+    });
+  </script>
+
+ <script type=text/javascript>
+    $(function pLang() {
+      $('a#pLang').bind('click', function() {
+        $.getJSON('/_pLang', {
+          state: $('#pausebtn').attr("value")
+        }, function(data) {
+          alert("data");
+        });
+        return false;
+      });
+    });
+  </script>
+
+
+<h2>Watch Movie: {{ name }}<h2>
     
-        <form action="{{ url_for('kill')}}">
-          <input type="submit" value="Stop Playing">
-        </form>
+        <p>
+        <a href="{{ url_for('kill')}}">
+          <button type="button" class="btn btn-lg btn-danger">Stop Playing Movie</button>
+        </a>
+        </p>
+        <br>
+        <p>
+        <a href="pause();" id="pause">
+          <button id="pausebtn" type="button" class="btn btn-lg btn-danger">Pause/Play Movie</button>
+        </a>
+        </p>
+        <br>
+        <p>
+        <a href="pChapter();" id="pChapter">
+          <button id="pausebtn" type="button" class="btn btn-lg btn-warning">Previous Chapter</button>
+        </a>
+
+        <a href="nChapter();" id="nChapter">
+          <button id="pausebtn" type="button" class="btn btn-lg btn-warning">Next Chapter</button>
+        </a>
+        </p>
+        <br>
+        <p>
+        <a href="pLang();" id="pLang">
+          <button id="pausebtn" type="button" class="btn btn-lg btn-success">Previous Language</button>
+        </a>
+
+        <a href="nLang();" id="nLang">
+          <button id="pausebtn" type="button" class="btn btn-lg btn-success">Next Language</button>
+        </a>
+        </p>
 
 
       </div>
