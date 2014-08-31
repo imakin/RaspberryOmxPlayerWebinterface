@@ -11,7 +11,8 @@ import stat
 app = Flask(__name__)
 app.secret_key = 'some_secret'
 app.path= "/mnt/Movies"
-app.fifo= "/home/tozi/omx.pipe"
+app.fifo= "/home/pi/omx.pipe"
+
 def fifo():
     if os.path.exists(app.fifo):
         pass
@@ -32,6 +33,7 @@ def home():
       names.append(file.decode('utf-8'))
   for name in names:
       os.chdir(app.path+"/"+name)
+      #My images end alle with *.poster.jpg
       for file in glob.glob("*poster.jpg"):
 
          # thumbnails.append(app.path+"/"+name+"/"+file.decode('utf-8'))
