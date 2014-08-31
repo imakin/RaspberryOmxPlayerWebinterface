@@ -1,3 +1,14 @@
+#Webinterface#
+Desktop Version:
+
+<a href="http://imgur.com/xkaCWnm"><img src="http://i.imgur.com/xkaCWnm.png" title="Hosted by imgur.com" width=50% /></a>
+<a href="http://imgur.com/5JdzYb0"><img src="http://i.imgur.com/5JdzYb0.png" title="Hosted by imgur.com" width=50% /></a>
+
+Mobile:
+
+<a href="http://imgur.com/szH9cad"><img src="http://i.imgur.com/szH9cad.png" title="Hosted by imgur.com" width=20% /></a>
+<a href="http://imgur.com/5vwxNVV"><img src="http://i.imgur.com/5vwxNVV.png" title="Hosted by imgur.com" width=20% /></a>
+
 #Introduction#
 
 This Project provides a webinterface to controll your raspberry pi's omxplayer. In my environment I mount a NAS to the pi and play the movies via omxplayer directly form the pi. 
@@ -78,8 +89,3 @@ Furthermore you have to copy your "cover images" to ./static/img/movies folder (
 Therefore I provided a little python script which you have to fit to your movie structure (see ./static/img/image_grabber.py). This script has to run manually.
 Otherwise you wont see any images.
 
-#Webinterface#
-Desktop Version:
-<a href="http://imgur.com/xkaCWnm"><img src="http://i.imgur.com/xkaCWnm.png" title="Hosted by imgur.com" /></a>
-
-<a href="http://imgur.com/5JdzYb0"><img src="http://i.imgur.com/5JdzYb0.png" title="Hosted by imgur.com" /></a>
