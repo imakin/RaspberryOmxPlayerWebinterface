@@ -52,7 +52,7 @@ def movie():
             os.chdir(app.path+"/"+name)
             for movie in glob.glob("*.mkv"):
                 os.system("omxplayer -b -o hdmi "+movie+" < "+app.fifo +" &")
-                os.system("echo -n . > " + app.fifo)
+                os.system("echo -n z > " + app.fifo)
     return render_template('movie.html', name=name)
 
 @app.route('/kill')
